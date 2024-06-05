@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Home"
+        android:id="@+id/home"/>
+
+    <item
+        android:title="About"
+        android:id="@+id/about"/>
+    <item
+        android:title="Template"
+        android:id="@+id/tempalte"/>
+
+    <item
+        android:title="Configuration"
+        android:id="@+id/configuration"/>
+
+    <item
+        android:title="Permission"
+        android:id="@+id/permission"/>
+
+    <item
+        android:title="Subscription"
+        android:id="@+id/subscription"/>
+
+    <item
+        android:title="Profile"
+        android:id="@+id/profile"/>
+
+    <item
+        android:title="Contact"
+        android:id="@+id/contact"/>
+
+
+
+    <item
+        android:title="LogOut"
+        android:id="@+id/logout"/>
+
+
+</menu>

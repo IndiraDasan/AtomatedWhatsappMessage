@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="appcolor">#992A59FF</color>
+
+    <color name="black">#000000</color>
+    <color name="ashbg">#00D9D900</color>
+    <color name="edittxtbgcolor">#6B75C173</color>
+    <color name="buttoncolor">#2A9541</color>
+    <color name="textcolor">#034E0A</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bg">#F6FCFF</color>
+    <color name="txtcolor">#000000</color>
+    <color name="subHeadingcolor">#01A2F9</color>
+    <color name="deleteicon">#FFD4D4</color>
+    <color name="deleteiconicon">#EB5757</color>
+    <color name="btncolor">#01A2F9</color>
+    <color name="gray">#D9D9D9</color>
+    <color name="stroke_color">#BDBDBD</color>
+    <color name="box_bg_color">#F6FCFF</color>
+    <color name="otp_box_bg_color">#F7F8F9</color>
+    <color name="hint_color">#6B000000</color>
+    <color name="text_subHeading">#475569</color>
+    <color name="gold_white"> #FFFFF4</color>
+    <color name="red_light">#FC7979</color>
+
+</resources>

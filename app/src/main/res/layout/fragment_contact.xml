@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.ContactFragment">
+
+
+    <include
+        android:id="@+id/include_passwordbg"
+        layout="@layout/bg_layout"/>
+
+    <TextView
+        android:id="@+id/text_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_160adp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/_20adp"
+        android:layout_marginEnd="@dimen/_20adp"
+        android:textSize="@dimen/_15asp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="We are always ready to give response from our side so u can contact us whenever"/>
+
+
+    <TextView
+        android:id="@+id/text_phone"
+        app:layout_constraintTop_toBottomOf="@id/text_heading"
+        android:layout_marginTop="@dimen/_20adp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="@dimen/_20adp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MobileNuber:"
+        android:textSize="@dimen/_15asp"
+        android:fontFamily="@font/poppinsregular"/>
+    <TextView
+        android:id="@+id/text_Mail"
+        app:layout_constraintTop_toBottomOf="@id/text_phone"
+        android:layout_marginTop="@dimen/_10adp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="@dimen/_20adp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mail Id:"
+        android:textSize="@dimen/_15asp"
+        android:fontFamily="@font/poppinsregular"/>
+    <TextView
+        android:id="@+id/text_link"
+        app:layout_constraintTop_toBottomOf="@id/text_Mail"
+        android:layout_marginTop="@dimen/_10adp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="@dimen/_20adp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Link:"
+        android:textSize="@dimen/_15asp"
+        android:fontFamily="@font/poppinsregular"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

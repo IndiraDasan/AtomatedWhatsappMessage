@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.HomeFragment">
+
+    <include
+        android:id="@+id/include_homebg"
+        layout="@layout/bg_layout"/>
+
+
+    <TextView
+        android:id="@+id/text_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="@dimen/_15asp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="WELCOME ZHACODE !"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="@dimen/_10adp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/_240adp"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyview_calllogs"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/callogslayout"
+        app:layout_constraintTop_toBottomOf="@id/text_heading"
+        />
+
+
+    <TextView
+        android:id="@+id/text_content"
+        app:layout_constraintTop_toBottomOf="@id/recyview_calllogs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20adp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Create , Recommend, Suggest in whatsapp using the content Templates for solutions and easy interactions "
+        android:textAlignment="center"
+        android:textSize="@dimen/_20adp"
+        android:gravity="center"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

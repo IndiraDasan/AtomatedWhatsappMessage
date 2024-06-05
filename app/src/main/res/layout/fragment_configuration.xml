@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:paddingBottom="@dimen/_10adp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.ConfigurationFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <include
+        android:id="@+id/include_passwordbg"
+        layout="@layout/bg_layout"/>
+
+    <TextView
+        android:id="@+id/text_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/_15asp"
+        android:layout_marginStart="@dimen/_20adp"
+        android:layout_marginTop="@dimen/_150adp"
+        android:text="Type"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/poppinsregular"
+        />
+
+
+
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:backgroundTint="@color/appcolor"
+        android:layout_marginStart="@dimen/_25adp"
+        app:layout_constraintTop_toBottomOf="@id/text_type"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/radioGroup1">
+
+        <RadioButton
+            android:id="@+id/radio_Business"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:buttonTint="@color/gray"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinsregular"
+            android:minWidth="@dimen/_85adp"
+            android:text="Business"
+            android:paddingLeft="@dimen/_3adp"
+            android:textSize="@dimen/_15asp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RadioButton
+            android:id="@+id/radio_personal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/poppinsregular"
+            android:minWidth="@dimen/_85adp"
+            android:textColor="@color/black"
+            android:buttonTint="@color/gray"
+            android:text="Personal"
+            android:layout_marginLeft="@dimen/_30adp"
+            android:paddingLeft="@dimen/_3adp"
+            android:textSize="@dimen/_15asp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+
+
+
+    </RadioGroup>
+
+
+
+    <TextView
+        android:id="@+id/text_template_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selected Template"
+        android:layout_marginTop="@dimen/_10adp"
+        android:fontFamily="@font/poppinsregular"
+        android:layout_marginStart="@dimen/_20adp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/_15asp"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup1"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_missed_call_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/_10adp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/_25adp"
+        android:layout_marginEnd="@dimen/_25adp"
+        app:cardCornerRadius="@dimen/_15adp"
+        app:cardBackgroundColor="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/text_template_heading"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_missed_call"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/gray"
+            android:animateLayoutChanges="true"
+            >
+            <TextView
+                android:id="@+id/text_missed_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Missed Calls     :"
+                android:padding="@dimen/_5adp"
+                android:minWidth="@dimen/_110adp"
+                android:background="@color/gray"
+                android:fontFamily="@font/poppinsregular"
+                android:includeFontPadding="false"
+                android:layout_marginLeft="@dimen/_5adp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="@dimen/_14asp"
+                android:textColor="@color/black"
+                tools:ignore="MissingConstraints"
+            />
+
+            <TextView
+                android:id="@+id/text_mtname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Template Name"
+                android:layout_marginEnd="@dimen/_15adp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="@dimen/_14asp"
+                android:padding="@dimen/_4adp"
+                android:includeFontPadding="false"
+                android:layout_marginTop="@dimen/_1adp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/text_missed_field"
+                android:fontFamily="@font/poppinsregular"
+                android:textColor="@color/black"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/text_mdetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_15adp"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/_10adp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/_10adp"
+                android:text="the sample content which is for the service 1 that should be added to the here as the content for the service provided "
+                android:textSize="@dimen/_14asp"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_dailed_call"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/_15adp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="@dimen/_25adp"
+            android:layout_marginEnd="@dimen/_25adp"
+            app:cardCornerRadius="@dimen/_15adp"
+            app:cardBackgroundColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/card_missed_call_field"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_dailed_call"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:animateLayoutChanges="true"
+                >
+                <TextView
+                    android:id="@+id/text_dailed_field"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dailed Calls      :"
+                    android:padding="@dimen/_5adp"
+                    android:background="@color/gray"
+                    android:fontFamily="@font/poppinsregular"
+                    android:includeFontPadding="false"
+                    android:layout_marginLeft="@dimen/_5adp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textSize="@dimen/_14asp"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/text_dtname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Template Name"
+                    android:layout_marginTop="@dimen/_1adp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:includeFontPadding="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/text_dailed_field"
+                    android:layout_marginEnd="@dimen/_15adp"
+                    android:textSize="@dimen/_14asp"
+                    android:padding="@dimen/_4adp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/text_ddetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_15adp"
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/_10adp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="@dimen/_10adp"
+                    android:text="the sample content which is for the service 1 that should be added to the here as the content for the service provided "
+                    android:textSize="@dimen/_14asp"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+        android:id="@+id/card_received_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/card_dailed_call"
+        android:layout_marginStart="@dimen/_25adp"
+        android:layout_marginEnd="@dimen/_25adp"
+        android:layout_marginTop="@dimen/_15adp"
+        app:cardCornerRadius="@dimen/_15adp"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_received"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/gray"
+        android:animateLayoutChanges="true"
+    >
+        <TextView
+            android:id="@+id/text_received_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Received Calls :"
+            android:padding="@dimen/_5adp"
+            android:background="@color/gray"
+            android:fontFamily="@font/poppinsregular"
+            android:includeFontPadding="false"
+            android:layout_marginLeft="@dimen/_5adp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textSize="@dimen/_14asp"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/text_rtname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Template Name"
+            android:layout_marginTop="@dimen/_1adp"
+            app:layout_constraintTop_toTopOf="parent"
+        android:textSize="@dimen/_14asp"
+        android:padding="@dimen/_4adp"
+            android:includeFontPadding="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/_15adp"
+            app:layout_constraintStart_toEndOf="@id/text_received_field"
+        android:fontFamily="@font/poppinsregular"
+        android:textColor="@color/black"
+            tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/text_rdetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_15adp"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/_10adp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_10adp"
+        android:text="the sample content which is for the service 1 that should be added to the here as the content for the service provided "
+        android:textSize="@dimen/_14asp"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/text_send_type"
+            app:layout_constraintTop_toBottomOf="@id/card_received_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/_20adp"
+            android:layout_marginTop="@dimen/_10adp"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/poppinsregular"
+            android:layout_height="wrap_content"
+            android:text="Send Type"
+            android:includeFontPadding="false"
+            android:textSize="@dimen/_15asp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5adp"
+            android:visibility="visible"
+            android:layout_marginStart="@dimen/_25adp"
+            app:layout_constraintTop_toBottomOf="@id/text_send_type"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/radioGroup">
+
+            <RadioButton
+                android:id="@+id/radio_automatic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/gray"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Automatic"
+                android:paddingLeft="@dimen/_3adp"
+                android:textSize="@dimen/_15asp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <RadioButton
+                android:id="@+id/radio_manual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/poppinsregular"
+                android:minWidth="@dimen/_85adp"
+                android:buttonTint="@color/gray"
+                android:text="Manual"
+                android:layout_marginLeft="@dimen/_25adp"
+                android:paddingLeft="@dimen/_3adp"
+                android:textSize="@dimen/_15asp"
+                tools:ignore="TouchTargetSizeCheck" />
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/text_template"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/radioGroup"
+            android:textSize="@dimen/_15asp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/_20adp"
+            android:text="template"
+            android:layout_marginTop="@dimen/_10adp"
+            android:textColor="@color/black"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/poppinsregular"
+            />
+
+
+        <TextView
+            android:id="@+id/text_service_on_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="App ON/OFF"
+            android:fontFamily="@font/poppinsregular"
+            app:layout_constraintTop_toBottomOf="@id/text_template"
+            android:layout_marginStart="@dimen/_35adp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="@dimen/_15asp"
+            android:layout_marginTop="@dimen/_25adp"
+            android:textColor="@color/black"
+            />
+
+        <Switch
+            android:id="@+id/switch_service_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/text_template"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/_30adp"
+            android:layout_marginTop="@dimen/_25adp"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/btncolor"
+            app:cornerRadius="@dimen/_15adp"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/_10adp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_service_on_off"
+            android:padding="@dimen/_10adp"
+            android:text="Save"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

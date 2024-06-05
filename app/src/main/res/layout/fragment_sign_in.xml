@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.SignInFragment">
+
+    <include
+        android:id="@+id/include_signinbg"
+        layout="@layout/bg_layout"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="@dimen/_100adp"
+        android:layout_height="@dimen/_100adp"
+        android:src="@drawable/circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_75adp"/>
+
+
+    <TextView
+        android:id="@+id/txtv_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign in"
+        android:layout_marginTop="@dimen/_10adp"
+        android:fontFamily="@font/poppinsbold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="@dimen/_20asp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/profile_image"
+        />
+
+    <TextView
+        android:id="@+id/text_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Your Password ?"
+        android:layout_marginTop="@dimen/_10adp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/_20adp"
+        android:textSize="@dimen/_10asp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/edit_password"
+        />
+    <TextView
+        android:id="@+id/text_accounthint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don’t Have an Account?"
+        android:layout_marginTop="@dimen/_100adp"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="@dimen/_10asp"
+        android:minWidth="@dimen/_180adp"
+        android:layout_marginStart="@dimen/_75adp"
+        android:includeFontPadding="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_submit"
+        android:textColor="@color/black"
+        android:layout_marginBottom="@dimen/_15adp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/text_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:fontFamily="@font/poppinsregular"
+        android:includeFontPadding="false"
+        android:text="Sign up"
+        android:inputType="number"
+        android:textColor="@color/textcolor"
+        android:textSize="@dimen/_15asp"
+        android:layout_marginTop="@dimen/_5adp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/text_accounthint"
+        app:layout_constraintTop_toBottomOf="@+id/button_submit"
+        app:layout_constraintVertical_bias="0.908" />
+
+    <EditText
+        android:id="@+id/edit_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10adp"
+        android:inputType="textPersonName"
+        android:includeFontPadding="false"
+        android:layout_marginTop="@dimen/_20adp"
+        android:layout_marginLeft="@dimen/_20adp"
+        android:layout_marginRight="@dimen/_20adp"
+        android:background="@drawable/edittextbg"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/txtv_heading"
+        android:hint="UserName"
+        />
+
+
+    <EditText
+        android:id="@+id/edit_password"
+        android:layout_width="match_parent"
+        android:padding="@dimen/_10adp"
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="@dimen/_20adp"
+        android:layout_marginLeft="@dimen/_20adp"
+        android:layout_marginRight="@dimen/_20adp"
+        android:background="@drawable/edittextbg"
+        android:inputType="textEmailAddress"
+        android:singleLine="true"
+        android:imeOptions="actionGo"
+        android:fontFamily="@font/poppinsregular"
+        android:includeFontPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/edit_username"
+        android:hint="Password"
+        android:layout_height="wrap_content"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="sign in"
+        android:fontFamily="@font/poppinsregular"
+        android:layout_marginTop="@dimen/_20adp"
+        android:layout_marginLeft="@dimen/_20adp"
+        android:layout_marginRight="@dimen/_20adp"
+        android:padding="@dimen/_10adp"
+        android:backgroundTint="@color/buttoncolor"
+        app:cornerRadius="@dimen/_25adp"
+        app:layout_constraintTop_toBottomOf="@id/text_forgot_password"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

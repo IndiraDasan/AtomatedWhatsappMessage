@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.paymentSuccessFragment">
+
+    <include
+        android:id="@+id/include_passwordbg"
+        layout="@layout/bg_layout"/>
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_150adp"
+        android:src="@drawable/ellipse_17"/>
+
+    <TextView
+        android:id="@+id/heading"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Payment Succuessfully Done"
+        android:fontFamily="@font/poppinsregular"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15asp"/>
+
+    <ImageView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rectangle_77"
+        app:layout_constraintTop_toBottomOf="@id/heading"
+        android:layout_marginTop="@dimen/_30adp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:fontFamily="@font/poppinsregular"
+        android:layout_marginLeft="@dimen/_20adp"
+        android:layout_marginRight="@dimen/_20adp"
+        android:padding="@dimen/_10adp"
+        android:backgroundTint="@color/edittxtbgcolor"
+        app:cornerRadius="@dimen/_25adp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/_20adp"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.PaymentFragment">
+
+    <include
+        android:id="@+id/include_passwordbg"
+        layout="@layout/bg_layout"/>
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_155adp"
+        android:layout_width="@dimen/_80adp"
+        android:src="@drawable/circle_image"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/_20adp"
+        android:layout_height="@dimen/_80adp"/>
+
+
+    <TextView
+        android:id="@+id/text_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_170adp"
+        android:textSize="@dimen/_12asp"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Username"/>
+
+
+
+    <TextView
+        android:id="@+id/text_phoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/text_username"
+        android:layout_marginTop="@dimen/_10adp"
+        android:textSize="@dimen/_12asp"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        android:fontFamily="@font/poppinsregular"
+        android:text="3456789451"/>
+
+
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1adp"
+        android:background="@color/black"
+        android:layout_marginTop="@dimen/_10adp"
+        app:layout_constraintTop_toBottomOf="@id/imageView"/>
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100adp"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="@dimen/_10adp"
+        android:layout_margin="@dimen/_10adp"
+        app:layout_constraintTop_toBottomOf="@id/text_selected_plan">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#AB9747FF"
+            />
+
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10adp"
+            android:text="Rs.456"
+            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/_20adp"
+            android:textSize="@dimen/_25asp"/>
+
+        <TextView
+            android:id="@+id/subheading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_45adp"
+            android:text="The Super Value pack"
+            android:paddingBottom="@dimen/_5adp"
+            android:layout_marginStart="@dimen/_15asp"
+            android:textSize="@dimen/_15asp"/>
+
+
+
+        <TextView
+            android:id="@+id/validity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10adp"
+            android:layout_gravity="end"
+            android:text="Validity"
+            android:layout_marginEnd="@dimen/_10adp"
+            android:textSize="@dimen/_15asp"/>
+
+
+        <TextView
+            android:id="@+id/days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginBottom="@dimen/_15adp"
+            android:layout_marginTop="@dimen/_10adp"
+            android:layout_marginEnd="@dimen/_10adp"
+            android:text="4days"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15asp"/>
+
+
+        <TextView
+            android:id="@+id/MoreDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MoreDetails"
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="@dimen/_10adp"
+            android:layout_marginEnd="@dimen/_10adp"
+            android:textSize="@dimen/_15asp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/text_selected_plan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        android:layout_marginTop="@dimen/_10adp"
+        android:textSize="@dimen/_15asp"
+        android:textColor="@color/black"
+        android:layout_marginStart="@dimen/_30adp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Selected Plan"/>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1adp"
+        android:background="@color/black"
+        android:layout_marginTop="@dimen/_10adp"
+        app:layout_constraintTop_toBottomOf="@id/cardview"/>
+
+
+    <TextView
+        android:id="@+id/text_payment_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/line2"
+        android:layout_marginTop="@dimen/_10adp"
+        android:textSize="@dimen/_15asp"
+        android:textColor="@color/black"
+        android:layout_marginStart="@dimen/_30adp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Payment option"/>
+
+
+    <ImageView
+        android:id="@+id/circle1"
+        android:layout_width="@dimen/_50adp"
+        android:layout_height="@dimen/_50adp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/_20adp"
+        android:layout_marginTop="@dimen/_5adp"
+        app:layout_constraintTop_toBottomOf="@id/text_payment_option"
+        android:src="@drawable/circle"/>
+
+
+    <ImageView
+        android:id="@+id/circle2"
+        android:layout_width="@dimen/_50adp"
+        android:layout_height="@dimen/_50adp"
+        app:layout_constraintStart_toEndOf="@id/circle1"
+        android:layout_marginStart="@dimen/_20adp"
+        android:layout_marginTop="@dimen/_5adp"
+        app:layout_constraintTop_toBottomOf="@id/text_payment_option"
+        android:src="@drawable/circle"/>
+
+
+    <ImageView
+        android:id="@+id/circle3"
+        android:layout_width="@dimen/_50adp"
+        android:layout_height="@dimen/_50adp"
+        app:layout_constraintStart_toEndOf="@id/circle2"
+        android:layout_marginStart="@dimen/_20adp"
+        android:layout_marginTop="@dimen/_5adp"
+        app:layout_constraintTop_toBottomOf="@id/text_payment_option"
+        android:src="@drawable/circle"/>
+
+    <ImageView
+        android:id="@+id/circle4"
+        android:layout_width="@dimen/_50adp"
+        android:layout_height="@dimen/_50adp"
+        app:layout_constraintStart_toEndOf="@id/circle3"
+        android:layout_marginStart="@dimen/_20adp"
+        android:layout_marginTop="@dimen/_5adp"
+        app:layout_constraintTop_toBottomOf="@id/text_payment_option"
+        android:src="@drawable/circle"/>
+
+
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Make Payments"
+        android:fontFamily="@font/poppinsregular"
+        android:layout_marginLeft="@dimen/_20adp"
+        android:layout_marginRight="@dimen/_20adp"
+        android:padding="@dimen/_10adp"
+        android:backgroundTint="#3F51B5"
+        app:cornerRadius="@dimen/_25adp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/_10adp"
+        />
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

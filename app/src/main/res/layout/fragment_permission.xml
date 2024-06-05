@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.PermissionFragment">
+
+
+    <include
+        android:id="@+id/include_signinbg"
+        layout="@layout/bg_layout"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_80adp">
+
+
+
+
+    <TextView
+        android:id="@+id/text_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact Permission"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/poppinsregular"
+        android:layout_marginStart="@dimen/_30adp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/_15asp"
+        android:layout_marginTop="@dimen/_160adp"
+        android:textColor="@color/black"
+        />
+
+    <Switch
+        android:id="@+id/switch_contact_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/_30adp"
+        android:layout_marginTop="@dimen/_160adp"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+    <TextView
+        android:id="@+id/text_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Camera Permission"
+        app:layout_constraintTop_toBottomOf="@id/switch_contact_button"
+        android:fontFamily="@font/poppinsregular"
+        android:layout_marginStart="@dimen/_30adp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/_15asp"
+        android:layout_marginTop="@dimen/_20adp"
+        android:textColor="@color/black"
+        />
+
+    <Switch
+        android:id="@+id/switch_camera_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/_30adp"
+        app:layout_constraintTop_toBottomOf="@id/switch_contact_button"
+        android:layout_marginTop="@dimen/_20adp"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+    <TextView
+        android:id="@+id/text_Location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location Permission"
+        android:fontFamily="@font/poppinsregular"
+        android:layout_marginStart="@dimen/_30adp"
+        app:layout_constraintTop_toBottomOf="@id/text_camera"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/_15asp"
+        android:layout_marginTop="@dimen/_26adp"
+        android:textColor="@color/black"
+        />
+
+    <Switch
+        android:id="@+id/switch_Location_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/switch_camera_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/_30adp"
+        android:layout_marginTop="@dimen/_26adp"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+    <TextView
+        android:id="@+id/text_fileManger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="File Manager"
+        app:layout_constraintTop_toBottomOf="@id/switch_Location_button"
+        android:fontFamily="@font/poppinsregular"
+        android:layout_marginStart="@dimen/_30adp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/_15asp"
+        android:layout_marginTop="@dimen/_26adp"
+        android:textColor="@color/black"
+        />
+
+    <Switch
+        android:id="@+id/switch_fileManager_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/_30adp"
+        android:layout_marginTop="@dimen/_26adp"
+        app:layout_constraintTop_toBottomOf="@id/switch_Location_button"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+    <TextView
+        android:id="@+id/text_audio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Audio Permission"
+        android:fontFamily="@font/poppinsregular"
+        android:layout_marginStart="@dimen/_30adp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switch_fileManager_button"
+        android:textSize="@dimen/_15asp"
+        android:layout_marginTop="@dimen/_26adp"
+        android:textColor="@color/black"
+        />
+
+    <Switch
+        android:id="@+id/switch_audio_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/switch_fileManager_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/_30adp"
+        android:layout_marginTop="@dimen/_26adp"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

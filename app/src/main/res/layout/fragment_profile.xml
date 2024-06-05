@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:paddingBottom="@dimen/_20adp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <include
+        android:id="@+id/include_profilebg"
+        layout="@layout/bg_layout"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="@dimen/_100adp"
+        android:layout_height="@dimen/_100adp"
+        android:src="@drawable/circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_75adp"/>
+
+
+    <TextView
+        android:id="@+id/txtv_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username:XXpi"
+        android:layout_marginTop="@dimen/_10adp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="@dimen/_15asp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/profile_image"
+        />
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:layout_marginTop="@dimen/_10adp"
+        android:fontFamily="@font/poppinsregular"
+        android:layout_marginStart="@dimen/_30adp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/_12asp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/txtv_heading"
+        />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_namefield"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/_30adp"
+        android:layout_marginEnd="@dimen/_30adp"
+        app:cardCornerRadius="@dimen/_5adp"
+        app:layout_constraintTop_toBottomOf="@id/text_name"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/edittxtbgcolor">
+            <TextView
+                android:id="@+id/text_name_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:padding="@dimen/_5adp"
+                android:layout_marginStart="@dimen/_30adp"
+                android:fontFamily="@font/poppinsregular"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:includeFontPadding="false"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="@dimen/_12asp"
+                android:textColor="@color/black"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/text_mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MobileNumber"
+        android:layout_marginTop="@dimen/_10adp"
+        android:fontFamily="@font/poppinsregular"
+        android:layout_marginStart="@dimen/_30adp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/_12asp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/card_namefield"
+        />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_mobile_filed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/_30adp"
+        android:layout_marginEnd="@dimen/_30adp"
+        app:cardCornerRadius="@dimen/_5adp"
+        app:layout_constraintTop_toBottomOf="@id/text_mobile"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/edittxtbgcolor">
+        <TextView
+            android:id="@+id/text_mobile_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="8608079667"
+            android:padding="@dimen/_5adp"
+            android:layout_marginStart="@dimen/_30adp"
+            android:fontFamily="@font/poppinsregular"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:includeFontPadding="false"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="@dimen/_12asp"
+            android:textColor="@color/black"
+            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/text_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:layout_marginTop="@dimen/_10adp"
+        android:fontFamily="@font/poppinsregular"
+        android:layout_marginStart="@dimen/_30adp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/_12asp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/card_mobile_filed"
+        />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_email_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/_30adp"
+        android:layout_marginEnd="@dimen/_30adp"
+        app:cardCornerRadius="@dimen/_5adp"
+        app:layout_constraintTop_toBottomOf="@id/text_email"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/edittxtbgcolor">
+        <TextView
+            android:id="@+id/text_email_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zhacode22@gmail.com"
+            android:padding="@dimen/_5adp"
+            android:layout_marginStart="@dimen/_30adp"
+            android:fontFamily="@font/poppinsregular"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:includeFontPadding="false"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="@dimen/_12asp"
+            android:textColor="@color/black"
+            />
+        
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/text_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type(Business/Personal)"
+        android:layout_marginTop="@dimen/_10adp"
+        android:fontFamily="@font/poppinsregular"
+        android:layout_marginStart="@dimen/_30adp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/_12asp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/card_email_field"
+        />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/_30adp"
+        android:layout_marginEnd="@dimen/_30adp"
+        app:cardCornerRadius="@dimen/_5adp"
+        app:layout_constraintTop_toBottomOf="@id/text_type"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/edittxtbgcolor">
+        <TextView
+            android:id="@+id/text_type_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Business"
+            android:padding="@dimen/_5adp"
+            android:layout_marginStart="@dimen/_30adp"
+            android:fontFamily="@font/poppinsregular"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:includeFontPadding="false"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="@dimen/_12asp"
+            android:textColor="@color/black"
+            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/text_Bname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Business Name"
+        android:layout_marginTop="@dimen/_10adp"
+        android:fontFamily="@font/poppinsregular"
+        android:layout_marginStart="@dimen/_30adp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/_12asp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/card_type"
+        />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_Bnmae_filed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/_30adp"
+        android:layout_marginEnd="@dimen/_30adp"
+        app:cardCornerRadius="@dimen/_5adp"
+        app:layout_constraintTop_toBottomOf="@id/text_Bname"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/edittxtbgcolor">
+        <TextView
+            android:id="@+id/text_Bname_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="It Service Company"
+            android:padding="@dimen/_5adp"
+            android:layout_marginStart="@dimen/_30adp"
+            android:fontFamily="@font/poppinsregular"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:includeFontPadding="false"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="@dimen/_12asp"
+            android:textColor="@color/black"
+            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/text_WhatsappType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WhatsApp Type"
+        android:layout_marginTop="@dimen/_10adp"
+        android:fontFamily="@font/poppinsregular"
+        android:layout_marginStart="@dimen/_30adp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/_12asp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/card_Bnmae_filed"
+        />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_WhatsApp_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/_30adp"
+        android:layout_marginEnd="@dimen/_30adp"
+        app:cardCornerRadius="@dimen/_5adp"
+        app:layout_constraintTop_toBottomOf="@id/text_WhatsappType"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/edittxtbgcolor">
+        <TextView
+            android:id="@+id/text_whatsapp_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="It Service Company"
+            android:padding="@dimen/_5adp"
+            android:layout_marginStart="@dimen/_30adp"
+            android:fontFamily="@font/poppinsregular"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:includeFontPadding="false"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="@dimen/_12asp"
+            android:textColor="@color/black"
+            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+        <TextView
+            android:id="@+id/text_Whatsappnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WhatsApp Type"
+            android:layout_marginTop="@dimen/_10adp"
+            android:fontFamily="@font/poppinsregular"
+            android:layout_marginStart="@dimen/_30adp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="@dimen/_12asp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/card_WhatsApp_type"
+            />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_WhatsApp_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="@dimen/_30adp"
+            android:layout_marginEnd="@dimen/_30adp"
+            app:cardCornerRadius="@dimen/_5adp"
+            app:layout_constraintTop_toBottomOf="@id/text_Whatsappnumber"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/edittxtbgcolor">
+            <TextView
+                android:id="@+id/text_whatsapp_number_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="It Service Company"
+                android:padding="@dimen/_5adp"
+                android:layout_marginStart="@dimen/_30adp"
+                android:fontFamily="@font/poppinsregular"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:includeFontPadding="false"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="@dimen/_12asp"
+                android:textColor="@color/black"
+                />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <TextView
+            android:id="@+id/text_on_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WhatsApp Type"
+            android:layout_marginTop="@dimen/_10adp"
+            android:fontFamily="@font/poppinsregular"
+            android:layout_marginStart="@dimen/_30adp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="@dimen/_12asp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/card_WhatsApp_number"
+            />
+        
+        <Switch
+            android:id="@+id/switch_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/_30adp"
+            android:layout_marginTop="@dimen/_10adp"
+            app:layout_constraintTop_toBottomOf="@id/card_WhatsApp_number"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

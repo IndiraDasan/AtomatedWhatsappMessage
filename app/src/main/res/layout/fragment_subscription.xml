@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.SubscriptionFragment">
+
+
+    <include
+        android:id="@+id/include_passwordbg"
+        layout="@layout/bg_layout"/>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_155adp"
+        android:layout_width="@dimen/_80adp"
+        android:src="@drawable/circle_image"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/_20adp"
+        android:layout_height="@dimen/_80adp"/>
+
+
+    <TextView
+        android:id="@+id/text_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_170adp"
+        android:textSize="@dimen/_12asp"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Username"/>
+
+
+
+    <TextView
+        android:id="@+id/text_phoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/text_username"
+        android:layout_marginTop="@dimen/_10adp"
+        android:textSize="@dimen/_12asp"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        android:fontFamily="@font/poppinsregular"
+        android:text="3456789451"/>
+
+
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2adp"
+        android:background="@color/black"
+        android:layout_marginTop="@dimen/_10adp"
+        app:layout_constraintTop_toBottomOf="@id/imageView"/>
+
+
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/searchcurvebg"
+        android:layout_marginTop="@dimen/_20adp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/_20adp"
+        android:layout_marginEnd="@dimen/_20adp"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyview_pack"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/subscriptionlayout"
+        app:layout_constraintTop_toBottomOf="@id/search"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
